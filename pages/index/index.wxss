@@ -1,0 +1,67 @@
+/**index.wxss**/
+.swiper_wrap{
+  width: 100%;
+  height: 320rpx;
+  background-color: red;
+}
+
+.search_bar_wrap{
+  width: 100%;
+  height: 80rpx;
+  background-color: blue;
+}
+
+.content_wrap{
+  width: 100%;
+  height: calc(100% - 400rpx);
+  background-color: green;
+}
+
+.type_wrap{
+  width: 100%;
+  height: 50rpx;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.type_wrap radio-group{
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.type_wrap label{
+  text-align: center;
+  font-size: 30rpx;
+  color: #303030;
+  line-height: 50rpx;
+  font-weight: bold;
+}
+.type_wrap .type_checked{
+  border-bottom: 1rpx solid #ec6941;
+  color: #ec6941;
+}
+
+.movie_item_wrap{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding:37rpx; 
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  background-color: grey;
+}
+
+.movie_item{
+  width: 216rpx;
+  height: 340rpx;
+  background-color: pink;
+  margin-right: 6rpx;
+  margin-left: 6rpx;
+  margin-bottom: 10rpx;
+}

@@ -1,0 +1,25 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- 轮播图 -->
+  <view class='swiper_wrap'></view>
+  <!-- 搜索框 -->
+  <view class='search_bar_wrap'></view>
+  <!-- 内容展示 -->
+  <view class='content_wrap'>
+    <!-- 分类导航栏 -->
+    <view class='type_wrap'>
+      <radio-group  bindchange="typeRadioChange">
+        <label class="{{item.ischecked?'type_checked':''}}" wx:for="{{types}}" wx:key="*this">
+          <radio value="{{item.id}}" checked="{{item.ischecked}}" hidden/>{{item.name}}
+        </label>
+      </radio-group>
+    </view>
+
+    <!-- 内容展示view -->
+    <view class='movie_item_wrap' >
+      <block wx:for="{{movieItems}}" wx:key="*this">
+      <view class='movie_item movie_id_{{item.id}}'>{{item.id}}</view>
+      </block>
+    </view>
+  </view>
+</view>
