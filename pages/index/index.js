@@ -96,8 +96,9 @@ Page({
         this.data.count = count + 6;
         this.setData({ // 更新数据
           movieItems: items
+        },()=>{
+          that.viewPort();
         })
-        that.viewPort();
       }
     })
   },
