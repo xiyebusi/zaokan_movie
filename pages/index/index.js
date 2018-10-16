@@ -4,6 +4,20 @@ const app = getApp()
 
 Page({
   data: {
+    swiperItems: [{
+      "url": "",
+      "imgUrl": "https://developers.weixin.qq.com/miniprogram/dev/image/cat/0.jpg?t=18101520"
+    }, {
+      "url": "",
+      "imgUrl": "https://developers.weixin.qq.com/miniprogram/dev/image/cat/0.jpg?t=18101520"
+    }, {
+      "url": "",
+      "imgUrl": "https://developers.weixin.qq.com/miniprogram/dev/image/cat/0.jpg?t=18101520"
+    }, {
+      "url": "",
+      "imgUrl": "https://developers.weixin.qq.com/miniprogram/dev/image/cat/0.jpg?t=18101520"
+    }],
+    currentSwiper: 0,
     types: [{
         "name": "电影",
         "id": "movie",
@@ -88,7 +102,7 @@ Page({
         //模拟ajax加载数据
         let count = this.data.count;
         let items = this.data.movieItems;
-        for (let i = 1;i <= 6;i++){
+        for (let i = 1; i <= 6; i++) {
           items.push({
             'id': count + i
           });
@@ -96,7 +110,7 @@ Page({
         this.data.count = count + 6;
         this.setData({ // 更新数据
           movieItems: items
-        },()=>{
+        }, () => {
           that.viewPort();
         })
       }
@@ -125,5 +139,10 @@ Page({
       types: types
     })
     //数据发生更改,ajax重新请求数据
+  },
+  swiperChange: function (e) {
+    this.setData({
+      currentSwiper: e.detail.current
+    })
   }
 })

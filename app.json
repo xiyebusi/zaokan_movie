@@ -17,17 +17,6 @@
       "selectedIconPath": "resources/images/home_selected.png"
     },{
       "pagePath": "pages/index/index",
-      "text": "收藏",
-      "iconPath": "resources/images/favourite.png"
-    },{
-      "pagePath": "pages/index/index",
-      "iconPath": "resources/images/tabbar_logo.png"
-    },{
-      "pagePath": "pages/index/index",
-      "text": "播单",
-      "iconPath": "resources/images/record_list.png"
-    },{
-      "pagePath": "pages/index/index",
       "text": "我的",
       "iconPath": "resources/images/info.png",
       "selectedIconPath": "resources/images/info_selected.png"
