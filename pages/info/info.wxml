@@ -1,0 +1,47 @@
+<!--pages/info/info.wxml-->
+<view class='container' style='background-color:#ADADAD'>
+  <view class='info_wrap'>
+    <image class='avatar' src='{{avatar}}'></image>
+    <view class='nickname'>{{nickname}}</view>
+    
+    <!-- 看单、关注、收藏数 -->
+    <view class='data_box'>
+      <view class='item_box'>
+        <view class='number'>{{recordNumber}}</view>
+        <view class='item'>看单</view>
+      </view>
+      <view class='separate'></view>
+      <view class='item_box'>
+        <view class='number'>{{watchNumber}}</view>
+        <view class='item'>关注</view>
+      </view>
+      <view class='separate'></view>
+      <view class='item_box'>
+        <view class='number'>{{favouriteNumber}}</view>
+        <view class='item'>收藏</view>
+      </view>
+    </view>
+    <!-- 看单、关注、收藏数 end -->
+    <view class='horizontal_separate'></view>
+
+    <!-- 播放列表 -->
+    <view class='record_box'>
+      <view class='title'>播放列表</view>
+      <view class='record_list_box' >
+        <view class='record_item_box' wx:for='{{recordList}}' wx:key='*this'>
+          <navigator url=''>
+            <image class='record_img' mode='scaleToFill' src='{{item.post}}'></image>
+            <view class='record_name'>{{item.name}}</view>
+          </navigator>
+        </view>
+      </view>
+    </view>
+
+    <view class='horizontal_separate'></view>
+    <view class='declare'>
+      <view class='title'>免责声明</view>
+    </view>
+
+    <view class='horizontal_separate'></view>
+  </view>
+</view>
