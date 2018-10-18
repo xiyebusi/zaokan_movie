@@ -75,7 +75,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin-bottom: 20rpx;
+  
 }
 
 .record_box .title{
@@ -83,7 +83,7 @@
   text-align: left;
   font-size: large;
   font-weight: bold;
-  margin: 20rpx;
+  margin: 15rpx;
   margin-left: 20rpx;
 }
 
@@ -93,6 +93,7 @@
   align-self: center;
   flex-direction: row;
   justify-content: space-around;
+  margin-bottom: 15rpx;
 }
 
 .record_box .record_list_box .record_item_box{

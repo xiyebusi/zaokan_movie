@@ -1,7 +1,10 @@
 /* 电影详情页样式 */
 .movie_wrap{
   width: 100%;
-  height: 480rpx;
+  height: 520rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .movie_box{
@@ -11,7 +14,7 @@
 
 .movie_info_wrap{
   width: 100%;
-  height: 80rpx;
+  height: 120rpx;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -20,12 +23,12 @@
 
 .movie_info_wrap .movie_info_box{
   width: 600rpx;
-  height: 60rpx;
+  height: 90rpx;
   margin: 10rpx;
   margin-left: 40rpx;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: flex-start;
 }
 
 .movie_info_box .movie_name{
@@ -37,13 +40,14 @@
   font-family: '黑体';
   color: #303030;
   text-align: left;
+  margin-bottom: 10rpx;
   
 }
 
 .movie_info_box .movie_actors{
   width: 100%;
-  height: 20rpx;
-  line-height: 20rpx;
+  height: 10rpx;
+  line-height: 26rpx;
   font-size: small;
   color: #adadad;
   text-align: left;
@@ -67,8 +71,81 @@
 .movie_share_box view,.movie_favourite_box view{
   width: 100%;
   height: 28rpx;
-  font-size: small;
+  font-size: x-small;
   color: #303030;
   text-align: center;
 }
 
+.color_separate{
+  width: 100%;
+  height: 40rpx;
+  background: linear-gradient(#DCDCDC , white);
+}
+
+.source_wrap{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-bottom: 20rpx;
+}
+
+.source_title{
+  width: 100%;
+  font-size: large;
+  font-weight: bold;
+  margin-left: 40rpx;
+  padding-left: 10rpx;
+  border-left: 8rpx solid #DCDCDC
+}
+
+.source_box{
+  width: 80%;
+  margin-top: 10rpx;
+  border-radius: 20rpx;
+  padding: 20rpx;
+  background-color: #DCDCDC;
+  align-self: center;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+}
+
+.source_box button{
+  border: 0;
+  margin: 0;
+  margin-right: 10rpx;
+  margin-bottom: 5rpx;
+}
+
+.introduce_wrap{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.introduce_title{
+  width: 100%;
+  font-size: large;
+  font-weight: bold;
+  margin-left: 40rpx;
+  padding-left: 10rpx;
+  border-left: 8rpx solid #DCDCDC
+}
+
+.introduce_box{
+  width: 80%;
+  margin-top: 10rpx;
+  border-radius: 20rpx;
+  padding: 20rpx;
+  background-color: #DCDCDC;
+  align-self: center;
+
+  font-size: small;
+  color: #303030;
+}

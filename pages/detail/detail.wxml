@@ -1,11 +1,12 @@
 <!--pages/detail/detail.wxml--> 
 <view class='container'>
+  <!-- 视频信息播放窗口 -->
   <view class='movie_wrap'>
     <video class='movie_box' src='{{src}}'></video>
     <view class='movie_info_wrap'>
       <view class='movie_info_box'>
-        <view class='movie_name'>碟中谍6:全面瓦解</view>
-        <view class='movie_actors'>汤姆·克鲁斯 / 亨利·卡维尔 / 文·瑞姆斯 / 西蒙·佩吉 </view>
+        <view class='movie_name'>{{movieName}}</view>
+        <view class='movie_actors'>{{movieActors}}</view>
       </view>
       <view class='movie_share_box'>
         <image src='/resources/images/movie_share.png'></image>
@@ -15,6 +16,28 @@
         <image src='/resources/images/movie_favourite.png'></image>
         <view>收藏</view>
       </view>
+    </view>
+  </view>
+  <!-- 视频信息播放窗口 end -->
+
+  <view class='color_separate'></view>
+
+  <view class='source_wrap'>
+    <view class='source_title'>播放源</view>
+    <view class='source_box'>
+      <button size='mini' type='primary'>线路1</button>
+      <button size='mini' type='primary'>线路1</button>
+      <button size='mini' type='primary'>线路1</button>
+      <button size='mini' type='primary'>线路1</button>
+      <button size='mini' type='primary'>线路1</button>
+      <button size='mini' type='primary'>线路1</button>
+    </view>
+  </view>
+
+  <view class='introduce_wrap'>
+    <view class='introduce_title'>简介</view>
+    <view class='introduce_box'>
+      {{introduce}}
     </view>
   </view>
 </view>

@@ -30,7 +30,7 @@
     <!-- 内容展示view -->
     <view class='movie_item_wrap' >
       <block wx:for="{{movieItems}}" wx:key="*this">
-      <view class='movie_item movie_id_{{item.id}}'>{{item.id}}</view>
+      <view class='movie_item movie_id_{{item.id}}' id='{{item.id}}' bindtap='movie_tap'>{{item.id}}</view>
       </block>
     </view>
   </view>

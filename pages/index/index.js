@@ -144,5 +144,11 @@ Page({
     this.setData({
       currentSwiper: e.detail.current
     })
+  },
+  movie_tap : function(e){
+    let id = e.currentTarget.id;
+    wx.navigateTo({
+      url: '/pages/detail/detail?id=' + id,
+    })
   }
 })

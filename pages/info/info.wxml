@@ -27,7 +27,7 @@
     <!-- 播放列表 -->
     <view class='record_box'>
       <view class='title'>播放列表</view>
-      <view class='record_list_box' >
+      <view wx:if="{{recordList.length > 0}}" class='record_list_box' >
         <view class='record_item_box' wx:for='{{recordList}}' wx:key='*this'>
           <navigator url=''>
             <image class='record_img' mode='scaleToFill' src='{{item.post}}'></image>
