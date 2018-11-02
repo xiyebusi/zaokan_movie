@@ -14,7 +14,11 @@
   </view>
   <!-- 搜索框 -->
   <view class='search_bar_wrap'>
-
+    <view class='search_bar'>
+      <view class='search_bar_text'>搜 索</view>
+      <input class='search_bar_input'></input>
+      <image class='search_bar_image' src='/resources/images/search_button.png'></image>
+    </view>
   </view>
   <!-- 内容展示 -->
   <view class='content_wrap'>

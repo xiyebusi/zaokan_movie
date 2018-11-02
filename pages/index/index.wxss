@@ -13,7 +13,39 @@
 .search_bar_wrap{
   width: 100%;
   height: 80rpx;
-  background-color: blue;
+  background: linear-gradient(#DCDCDC, white);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.search_bar{
+  width: 80%;
+  height: 60rpx;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 30rpx;
+}
+
+.search_bar_text{
+  color: #ADADAD;
+  font-size: 28rpx;
+  width: 100rpx;
+  font-weight: normal;
+  text-align: right;
+}
+.search_bar_input{
+  color:black;
+  font-size: 28rpx;
+}
+
+.search_bar_image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
 }
 
 .content_wrap{

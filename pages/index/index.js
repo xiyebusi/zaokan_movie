@@ -116,14 +116,7 @@ Page({
       }
     })
   },
-  getUserInfo: function(e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
-  },
+  
   //点击不同类型电影种类
   typeRadioChange: function(e) {
     //radio发生变化
