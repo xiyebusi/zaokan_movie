@@ -5,8 +5,8 @@
     <swiper class="swiper_box" autoplay bindchange='swiperChange' indicator-dots>
     <block wx:for="{{swiperItems}}" wx:key="*this">
         <swiper-item>
-            <navigator url="{{ item.url }}">
-                <image class="swiper_image" src="{{ item.imgUrl }}" mode='scaleToFill'></image>
+            <navigator url="/pages/detail/detail?id={{ item.src }}">
+                <image class="swiper_image" src="http://zaokanmovie.yusdaq.com/zaokan/upload/swiper?id={{ item.id }}" mode='scaleToFill'></image>
             </navigator>
         </swiper-item>
     </block>
@@ -16,8 +16,8 @@
   <view class='search_bar_wrap'>
     <view class='search_bar'>
       <view class='search_bar_text'>搜 索</view>
-      <input class='search_bar_input'></input>
-      <image class='search_bar_image' src='/resources/images/search_button.png'></image>
+      <input class='search_bar_input' bindinput='search_content'></input>
+      <image class='search_bar_image' src='/resources/images/search_button.png' bindtap='search_movie'></image>
     </view>
   </view>
   <!-- 内容展示 -->
@@ -34,7 +34,10 @@
     <!-- 内容展示view -->
     <view class='movie_item_wrap' >
       <block wx:for="{{movieItems}}" wx:key="*this">
-      <view class='movie_item movie_id_{{item.id}}' id='{{item.id}}' bindtap='movie_tap'>{{item.id}}</view>
+      <view class='movie_item movie_id_{{item.id}}' id='{{item.id}}' bindtap='movie_tap'>
+        <image class='movie_poster' src='{{item.poster}}'></image>
+        <view class='movie_name'>{{item.name}}</view>
+      </view>
       </block>
     </view>
   </view>

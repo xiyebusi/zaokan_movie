@@ -1,8 +1,11 @@
 <!--pages/info/info.wxml-->
 <view class='container' style='background-color:#ADADAD'>
   <view class='info_wrap'>
-    <image class='avatar' src='{{avatar}}'></image>
-    <view class='nickname'>{{nickname}}</view>
+   
+    <view class='avatar'>
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <view class='nickname'><open-data type="userNickName"></open-data></view>
     
     <!-- 看单、关注、收藏数 -->
     <view class='data_box'>

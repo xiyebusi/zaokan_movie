@@ -4,13 +4,11 @@
     "pages/info/info",
     "pages/detail/detail"
     
-    
-    
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "早看电影",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {

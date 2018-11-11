@@ -8,7 +8,7 @@
         <view class='movie_name'>{{movieName}}</view>
         <view class='movie_actors'>{{movieActors}}</view>
       </view>
-      <view class='movie_share_box'>
+      <view class='movie_share_box' bindtap='share'>
         <image src='/resources/images/movie_share.png'></image>
         <view>分享</view>
       </view>
@@ -25,12 +25,7 @@
   <view class='source_wrap'>
     <view class='source_title'>播放源</view>
     <view class='source_box'>
-      <button size='mini' type='primary'>线路1</button>
-      <button size='mini' type='primary'>线路1</button>
-      <button size='mini' type='primary'>线路1</button>
-      <button size='mini' type='primary'>线路1</button>
-      <button size='mini' type='primary'>线路1</button>
-      <button size='mini' type='primary'>线路1</button>
+      <button size='mini' type='primary' bindtap='source_tap'>线路1</button>
     </view>
   </view>
 

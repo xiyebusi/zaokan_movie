@@ -4,20 +4,9 @@ const app = getApp()
 
 Page({
   data: {
-    swiperItems: [{
-      "url": "",
-      "imgUrl": "https://developers.weixin.qq.com/miniprogram/dev/image/cat/0.jpg?t=18101520"
-    }, {
-      "url": "",
-      "imgUrl": "https://developers.weixin.qq.com/miniprogram/dev/image/cat/0.jpg?t=18101520"
-    }, {
-      "url": "",
-      "imgUrl": "https://developers.weixin.qq.com/miniprogram/dev/image/cat/0.jpg?t=18101520"
-    }, {
-      "url": "",
-      "imgUrl": "https://developers.weixin.qq.com/miniprogram/dev/image/cat/0.jpg?t=18101520"
-    }],
+    swiperItems: [],
     currentSwiper: 0,
+    searchContent:"",
     types: [{
         "name": "电影",
         "id": "movie",
@@ -39,55 +28,30 @@ Page({
         "ischecked": false
       }
     ],
-    movieItems: [{
-        "id": 1
-      },
-      {
-        "id": 2
-      },
-      {
-        "id": 3
-      },
-      {
-        "id": 4
-      },
-      {
-        "id": 5
-      },
-      {
-        "id": 6
-      }
+    movieItems: [
     ],
     count: 6
   },
   onLoad: function() {
-    this.viewPort();
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    } else if (this.data.canIUse) {
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
+    // 懒加载方式加载
+    // this.viewPort();
+    const that = this;
+    wx.request({
+      url: 'https://zaokanmovie.yusdaq.com/zaokan/index', //仅为示例，并非真实的接口地址
+      data: {},
+      method: 'get',
+      header: {
+        // 'content-type': 'application/json'
+        'Content-Type': 'json'
+      },
+      success: function (res) {
+        console.log(res.data.movieItems)
+        that.setData({
+          movieItems: res.data.movieItems,
+          swiperItems: res.data.swiperItems
         })
       }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
-        }
-      })
-    }
+    })
 
   },
   //懒加载方法
@@ -142,6 +106,26 @@ Page({
     let id = e.currentTarget.id;
     wx.navigateTo({
       url: '/pages/detail/detail?id=' + id,
+    })
+  },
+  search_content : function(e){
+    this.data.searchContent = e.detail.value;
+  },
+  search_movie: function(e){
+    const that = this;
+    wx.request({
+      url: 'https://zaokanmovie.yusdaq.com/zaokan/query_movie?name='+that.data.searchContent, 
+      data: {},
+      method: 'get',
+      header: {
+        'Content-Type': 'json'
+      },
+      success: function (res) {
+        console.log(res.data.movieItems)
+        that.setData({
+          movieItems: res.data.movieItems,
+        })
+      }
     })
   }
 })
